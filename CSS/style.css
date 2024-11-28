@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  transition: 0.4s;
+}
+
+body {
+  overflow: hidden;
+}
+
+.light .background {
+  background: linear-gradient(180deg, #85cffd, #5198c4);
+}
+.light .sunMoon {
+  background-color: #FFD52C;
+  box-shadow: 0 0 15px 6px #FFD52C;
+  left: -30px;
+  top: -35px;
+}
+.light .cat button {
+  background-color: #FF8000;
+}
+.light .cat .circle {
+  background-color: #FFFFFF;
+}
+.light .cat img {
+  background-image: url("../Images/white-cat.png");
+}
+
+.dark .background {
+  background: linear-gradient(180deg, #241a47, #140d30);
+}
+.dark .sunMoon {
+  background-color: #C7CBD0;
+  box-shadow: 0 0 15px 6px #C7CBD0;
+  right: -30px;
+  top: -35px;
+}
+.dark .cat button {
+  background-color: #4F38A5;
+}
+.dark .cat .circle {
+  background-color: #0F0A1F;
+}
+.dark .cat img {
+  background-image: url("../Images/black-cat.png");
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+.sunMoon {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.cat {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cat button {
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 7px 25px;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 7px;
+  border: none;
+  margin-bottom: 20px;
+}
+.cat button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.cat .circle {
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+}
+.cat img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 27em;
+  height: 27em;
+}
+
+.clouds-stars .cs1, .clouds-stars .cs2, .clouds-stars .cs3, .clouds-stars .cs4 {
+  position: absolute;
+}
+
+.clouds .cloud-star {
+  width: 180px;
+  height: 100px;
+}
+.clouds .cloud-star .bl1 {
+  background-color: #FFF;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  position: absolute;
+  right: 19px;
+  bottom: 9px;
+}
+.clouds .cloud-star .bl2 {
+  background-color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  right: 80px;
+  bottom: 15px;
+}
+.clouds .cloud-star .bottom {
+  background-color: #FFF;
+  width: 180px;
+  height: 45px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+}
+.clouds .cs1 {
+  right: 6em;
+  top: 2em;
+}
+.clouds .cs2 {
+  top: 19em;
+  right: 19em;
+}
+.clouds .cs3 {
+  top: 6em;
+  left: 30em;
+}
+.clouds .cs4 {
+  top: 15em;
+  left: 10em;
+}
+
+.stars .cloud-star {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.stars .cloud-star .bl1 {
+  background-color: #f3ad17;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 2px #f3ad17;
+  position: absolute;
+  right: 19px;
+  bottom: 9px;
+}
+.stars .cloud-star .bl2 {
+  display: none;
+}
+.stars .cloud-star .bottom {
+  display: none;
+}
+.stars .cs1 {
+  right: 44em;
+  top: 5em;
+}
+.stars .cs2 {
+  top: 14em;
+  right: 23em;
+}
+.stars .cs3 {
+  top: 16em;
+  left: 34em;
+}
+.stars .cs4 {
+  top: 8em;
+  left: 17em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  padding: 15px 20px;
+  font-size: 20px;
+}
+footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+@keyframes catRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.about-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.about-page main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.about-page main .cats img {
+  width: 180px;
+}
+.about-page main .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.about-page main .title h2 {
+  font-size: 50px;
+}
+.about-page main .title p {
+  font-size: 22px;
+  max-width: 500px;
+  font-weight: 300;
+}
+.about-page main .socials a {
+  text-decoration: none;
+  color: #000;
+}
+.about-page main .socials a div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.about-page main .socials a div img {
+  width: 35px;
+}
+.about-page main .socials a div h2 {
+  font-size: 24px;
+  font-weight: 400;
+}/*# sourceMappingURL=style.css.map */
